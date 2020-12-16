@@ -81,7 +81,7 @@ public class TicketDao {
 
     public List<Ticket> getTickets(long scheduleId) {
         Session session = DBUtil.getSessionFactory().openSession();
-        String hql = "from Ticket WHERE schedule_id = :scheduleId";
+        String hql = "FROM Ticket WHERE schedule_id = :scheduleId";
         return session.createQuery(hql,Ticket.class).setParameter("scheduleId", scheduleId).list();
     }
 

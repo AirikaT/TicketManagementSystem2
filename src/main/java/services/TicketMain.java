@@ -7,7 +7,7 @@ import java.util.Scanner;
 
 public class TicketMain {
 
-    public static void purchaseTickets() {
+    public void purchaseTickets() {
 
         Scanner scan = new Scanner(System.in);
         TicketDao ticketDao = new TicketDao();

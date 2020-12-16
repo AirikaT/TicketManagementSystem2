@@ -49,19 +49,19 @@ public class ScheduleDao {
 
     public Schedule getSchedule(Long scheduleId) {
 
-        try{
+        try {
             Session session = DBUtil.getSessionFactory().openSession();
             return session.find(Schedule.class, scheduleId);
-        }catch (Exception ex){
+        } catch (Exception ex) {
             System.out.println("Unable to find the schedule with id: " + scheduleId);
             ex.printStackTrace();
             return null;
         }
     }
 
-    public List<Schedule> getSchedules(){
+    public List<Schedule> getSchedules() {
         Session session = DBUtil.getSessionFactory().openSession();
-        return session.createQuery("from Schedule", Schedule.class).list();
+        return session.createQuery("FROM Schedule", Schedule.class).list();
     }
 
     public Schedule getScheduleEntry(long scheduleId) {

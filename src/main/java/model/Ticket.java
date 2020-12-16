@@ -7,7 +7,8 @@ import javax.persistence.*;
 import java.util.Date;
 
 @Entity
-@Table(schema = "theatre", name = "tickets")
+//@Table(name = "tickets") --> ot too if DB is connected through Intellij
+@Table (schema = "theatre", name = "tickets")
 
 public class Ticket {
     @Id
@@ -24,7 +25,7 @@ public class Ticket {
     private Schedule schedule;
 
     @OneToOne
-    @JoinColumn (name = "client_id", nullable = false)
+    @JoinColumn(name = "client_id", nullable = false)
     private Client client;
 
     @CreationTimestamp

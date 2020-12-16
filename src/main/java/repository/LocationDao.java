@@ -10,7 +10,6 @@ import java.util.List;
 public class LocationDao {
 
 
-
     public void createLocation(Location location) {
 
         Session session = DBUtil.getSessionFactory().openSession();
